@@ -1,0 +1,28 @@
+name: demo-env-var
+on: workflow_dispatch
+
+env: 
+  NAME: Mahamadou
+jobs:
+  # Premier job
+  dire_bonjour:
+    # Définition du runner (ubuntu:latest)
+    runs-on: ubuntu-latest
+    env: 
+      ENTREPRISE: Lobby
+    # Déclaration de la liste des steps
+    steps:
+      # Action par défaut qui permet de récupérer le code de répo
+      - name: "Dit Coucou"
+        run: echo "$NAME§ tu travaille chez $ENTREPRISE alors un bon $DAY à toi"
+        env:
+          DAY: Mardi
+      - name: "Mardi?"
+        run: "quel jour somme nous $DAY ?"
+  Au-Revoir:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Dit au revoir"
+        run: "au revoir $name! tu travailles pour quelle entreprise? $ENTREPRISE"
+
+     
