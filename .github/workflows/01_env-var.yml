@@ -14,7 +14,7 @@ jobs:
     steps:
       # Action par défaut qui permet de récupérer le code de répo
       - name: "Dit Coucou"
-        run: echo "$NAME§ tu travaille chez $ENTREPRISE alors un bon $DAY à toi"
+        run: echo "$NAME tu travaille chez $ENTREPRISE alors un bon $DAY à toi"
         env:
           DAY: Mardi
       - name: "Mardi?"
