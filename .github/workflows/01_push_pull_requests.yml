@@ -1,19 +1,21 @@
 name: push  and pull
 on: [push, pull_request]
 env: 
-  NAME: 
-    push
-    pull_request
+  NAME: push
+  NAME2:  pull_request
 
 
 jobs:
-  if-pull:
+  pull:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: condition 1
-      if: ${{ github.event_name == 'push' }}
-      run: echo "c est un pull."
-    - name: condition 2
-      if: ${{ github.event_name == 'pull_request' }}
-      run: echo "c est un pull resquest"
+      - name: pull
+        if: ${{ github.event_name == 'push' }}
+        run: echo "c est un pull."
+  
+  pull_request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pull_request
+        if: ${{ github.event_name == 'pull_request' }}
+        run: echo "c est un pull resquest"
