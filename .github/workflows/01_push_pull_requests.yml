@@ -12,6 +12,6 @@ jobs:
         if: runner.os == 'pull'
         run: echo "c est un pull."
       - name: condition 2
-        if: runner.os != 'pull'
+        if: runner.os = 'pull_resquest'
         run: echo "c est un pull resquest."
   
