@@ -18,11 +18,11 @@ jobs:
         env:
           DAY: Mardi
       - name: "Mardi?"
-        run: "quel jour somme nous $DAY ?"
+        run: echo "quel jour somme nous $DAY ?"
   Au-Revoir:
     runs-on: ubuntu-latest
     steps:
       - name: "Dit au revoir"
-        run: "au revoir $name! tu travailles pour quelle entreprise? $ENTREPRISE"
+        run: echo "au revoir $name! tu travailles pour quelle entreprise? $ENTREPRISE"
 
      
