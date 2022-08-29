@@ -6,10 +6,10 @@ env:
 
 
 jobs:
-  pull:
+  push:
     runs-on: ubuntu-latest
     steps:
-      - name: pull
+      - name: push
         if: ${{ github.event_name == 'push' }}
         run: echo "c est un pull."
   
