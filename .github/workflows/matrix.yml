@@ -1,0 +1,16 @@
+name: fruit 
+
+on: workflow_dispatch
+
+jobs:
+  fruit:
+    name: bon fruits
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        camarades: [Mamadou, Peter, Kevin] 
+        fruits: [banane, pomme, ananas, oragange]
+    steps:
+      - name: fruits
+        run: echo "${{matrix.camarades}} mange une ${{matrix.fruits}} et ${{matrix.camarades}} aime ça"
