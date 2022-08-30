@@ -10,7 +10,7 @@ jobs:
         - name: Creer le fichier
           run: "coucou toi artifact"
         - name: Upload Artifact
-          uses: actions/upload-articact@v3
+          uses: actions/upload-artifact@v3
           with:
             name: Artifact
             path: artifact.txt
