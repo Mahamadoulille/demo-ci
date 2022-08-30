@@ -16,14 +16,14 @@ jobs:
             path: artifact.txt
     
     
-    downmload:
+    download:
 
       name: download
       needs: upload
       runs-on: ubuntu-latest
       steps:
         - name: download
-          run: "coucou toi artifact"
+          run: "coucou toi dowbload artifact"
         - name: Upload Artifact
           uses: actions/download-artifact@v3
           with:
