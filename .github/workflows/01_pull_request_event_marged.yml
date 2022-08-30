@@ -1,0 +1,13 @@
+name: merged PR
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  Il_merge:
+    if: ${{github.event.pull_request.merged == true}}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Il_merge
+      run: echo "The pull_request a mergé"

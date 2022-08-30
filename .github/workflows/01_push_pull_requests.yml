@@ -1,17 +1,21 @@
 name: push  and pull
 on: [push, pull_request]
 env: 
-  NAME: push and pull requests
+  NAME:  c'est un push
+  NAME2:  c'est pull_request
 
 
 jobs:
-  if-pull:
+  push:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' }}
     steps:
-      - name: condition 1
-        if: runner.os == 'pull'
-        run: echo "c est un pull."
-      - name: condition 2
-        if: runner.os = 'pull_resquest'
-        run: echo "c est un pull resquest."
+      - name: push
+        run: echo "$NAME"
   
+  pull_request:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'pull_request' }}
+    steps:
+      - name: pull_request
+        run: echo "$NAME2"

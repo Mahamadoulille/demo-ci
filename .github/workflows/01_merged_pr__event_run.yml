@@ -1,0 +1,14 @@
+name: les workflows passée
+on:
+  workflow_run:
+    workflows: [merged PR]
+    types: [completed]
+
+jobs:
+  Un_succes:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Un_succes
+      run: echo "workflow merged PR executé"
+
+    

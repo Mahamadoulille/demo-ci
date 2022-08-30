@@ -1,0 +1,21 @@
+name: workflow need
+
+on: workflow_dispatch
+
+
+jobs:
+  premier_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: premier_job
+        run: echo "c'est exécuté"
+
+
+  second_job:
+    needs: [premier_job]
+    runs-on: ubuntu-latest
+    steps:
+      - name: second_job
+        run: echo "second worflow exécuté"
+
+

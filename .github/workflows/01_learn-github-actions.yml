@@ -1,6 +1,6 @@
 # Pipeline
 name: hello-word # Nom du workflow
-on: [push]
+on: workflow_dispatch
 jobs:
   # Premier hello word
   hello-word:
