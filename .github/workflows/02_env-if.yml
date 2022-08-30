@@ -7,6 +7,7 @@ jobs:
   dit_bonjour:
     runs-on : ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: "Dit bonjour"
         if: ${{env.NAME !='Mahamadou'}}
         run: echo "Coucou "$NAME! tu  n'est pas $NAME ?!"

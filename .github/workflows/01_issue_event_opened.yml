@@ -1,0 +1,14 @@
+name: Trigger_event
+on: 
+  issues:
+    types:
+      - opened
+env: 
+  NAME:  c'est issues 
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: validation
+        run: echo "c'est validé"
